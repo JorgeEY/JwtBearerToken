@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fy373yv\\OneDrive - EY\\Desktop\\VSStudio\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj": {}
+    "D:\\Codes\\VSStudio\\JwtBearerToken\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fy373yv\\OneDrive - EY\\Desktop\\VSStudio\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj": {
+    "D:\\Codes\\VSStudio\\JwtBearerToken\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fy373yv\\OneDrive - EY\\Desktop\\VSStudio\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj",
+        "projectUniqueName": "D:\\Codes\\VSStudio\\JwtBearerToken\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj",
         "projectName": "JWTBearerTokenTest",
-        "projectPath": "C:\\Users\\fy373yv\\OneDrive - EY\\Desktop\\VSStudio\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj",
-        "packagesPath": "C:\\Users\\fy373yv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fy373yv\\OneDrive - EY\\Desktop\\VSStudio\\JWTBearerTokenTest\\obj\\",
+        "projectPath": "D:\\Codes\\VSStudio\\JwtBearerToken\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj",
+        "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+        "outputPath": "D:\\Codes\\VSStudio\\JwtBearerToken\\JWTBearerTokenTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fy373yv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +43,10 @@
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.15.1, )"
             }
           },
           "imports": [
@@ -63,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }
