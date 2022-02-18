@@ -18,4 +18,9 @@ namespace JWTBearerTokenTest
         public string Purpose { get; set; }
         public List<AuthenticationContext> AuthenticationContext { get; set; }
     }
+
+    public class JwtToken
+    {
+        public string token { get; set; }
+    }
 }
