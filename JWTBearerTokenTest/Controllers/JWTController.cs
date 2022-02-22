@@ -46,7 +46,7 @@ namespace JWTBearerTokenTest.Controllers
 
             if (response.IsSuccessStatusCode)
             {
-                return Ok(response);
+                return Ok(await response.Content.ReadAsStringAsync());
             }
             else
             {
@@ -61,14 +61,16 @@ namespace JWTBearerTokenTest.Controllers
 
             byte[] privateKey = Base64UrlEncoder.DecodeBytes(_settings.RsaPrivateKey);
 
-            using RSA rsa = RSA.Create();
+            RSA rsa = RSA.Create();
             rsa.ImportRSAPrivateKey(privateKey, out _);
+
+            string aa = JsonSerializer.Serialize(claims.AuthenticationContext);
 
             Claim[] neededClaims = new[] {
                     new Claim(JwtRegisteredClaimNames.Sub, claims.Subject),
                     new Claim("scope", claims.Scope),
                     new Claim("purpose", claims.Purpose),
-                    new Claim("authentication_context", JsonSerializer.Serialize(claims.AuthenticationContext)),
+                    new Claim("authentication_context", JsonSerializer.Serialize(claims.AuthenticationContext), JsonClaimValueTypes.JsonArray),
                     new Claim(JwtRegisteredClaimNames.Acr, claims.Acr),
                     new Claim(JwtRegisteredClaimNames.Iat, new DateTimeOffset(now).ToUnixTimeSeconds().ToString(), ClaimValueTypes.Integer64),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
@@ -114,6 +116,7 @@ namespace JWTBearerTokenTest.Controllers
 
             JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
             handler.ValidateToken(token.token, validationParameters, out var validatedSecurityToken);
+            JwtSecurityToken t = handler.ReadJwtToken(token.token);
 
             return Ok(validatedSecurityToken);
         }
