@@ -24,3 +24,4 @@ D:\Codes\VSStudio\JwtBearerToken\JWTBearerTokenTest\obj\Debug\netcoreapp3.1\JWTB
 D:\Codes\VSStudio\JwtBearerToken\JWTBearerTokenTest\obj\Debug\netcoreapp3.1\JWTBearerTokenTest.dll
 D:\Codes\VSStudio\JwtBearerToken\JWTBearerTokenTest\obj\Debug\netcoreapp3.1\JWTBearerTokenTest.pdb
 D:\Codes\VSStudio\JwtBearerToken\JWTBearerTokenTest\obj\Debug\netcoreapp3.1\JWTBearerTokenTest.genruntimeconfig.cache
+D:\Codes\VSStudio\JwtBearerToken\JWTBearerTokenTest\bin\Debug\netcoreapp3.1\Properties\jwk.json

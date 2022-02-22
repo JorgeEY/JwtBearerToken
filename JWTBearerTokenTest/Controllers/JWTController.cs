@@ -9,6 +9,8 @@ using System.Security.Cryptography;
 using Microsoft.IdentityModel.Tokens;
 using System.Collections.Generic;
 using System.Security.Claims;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace JWTBearerTokenTest.Controllers
 {
@@ -17,17 +19,42 @@ namespace JWTBearerTokenTest.Controllers
     {
         private readonly ILogger<JWTController> _logger;
         private readonly JWTBearerTokenSettings _settings;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public JWTController(ILogger<JWTController> logger, IOptions<JWTBearerTokenSettings> setting)
+        public JWTController(ILogger<JWTController> logger, IOptions<JWTBearerTokenSettings> setting, IHttpClientFactory httpClientFactory)
         {
             _logger = logger;
             _settings = setting.Value;
+            _httpClientFactory = httpClientFactory;
         }
 
         [HttpPost]
         [Route("token")]
         [ProducesResponseType(typeof(string), Status200OK)]
-        public IActionResult GenerateJwt([FromBody] JwtClaims claims)
+        public async Task<IActionResult> GetBearerToken([FromBody] JwtClaims claims)
+        {
+            string token = GenerateJwt(claims);
+            string endpoint = "/token";
+
+            Dictionary<string, string> formurl = new Dictionary<string, string>();
+            formurl.Add("grant_type", "urn:ietf:params:oauth:grant-type:jwt-bearer");
+            formurl.Add("assertion", token);
+
+            HttpClient client = _httpClientFactory.CreateClient("Token4P");
+
+            HttpResponseMessage response = await client.PostAsync(endpoint, new FormUrlEncodedContent(formurl));
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Ok(response);
+            }
+            else
+            {
+                return BadRequest($"{response.StatusCode} - {await response.Content.ReadAsStringAsync()}");
+            }
+        }
+
+        private string GenerateJwt(JwtClaims claims)
         {
             DateTime now = DateTime.Now;
             DateTime exp = now.AddMinutes(5);
@@ -60,7 +87,7 @@ namespace JWTBearerTokenTest.Controllers
 
             string t = handler.WriteToken(token);
 
-            return Ok(t);
+            return t;
         }
 
         [HttpPost]
