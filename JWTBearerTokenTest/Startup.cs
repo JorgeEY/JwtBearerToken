@@ -22,15 +22,19 @@ namespace JWTBearerTokenTest
         {
             services.AddControllers();
             services.Configure<JWTBearerTokenSettings>(Configuration.GetSection("JWTBearerTokenSettings"));
+
+            JWTBearerTokenSettings jwtSettings = Configuration.GetSection("JWTBearerTokenSettings").Get<JWTBearerTokenSettings>();
             services.AddHttpClient("Token4P", client =>
             {
-                client.BaseAddress = new Uri("https://auth.global-int-current.baikalplatform.com");
-                byte[] byteArray = Encoding.ASCII.GetBytes("aavv:zsMl64PqIySg0RX5bvOQGQBDD");
+                client.BaseAddress = new Uri(jwtSettings.Audience);
+                byte[] byteArray = Encoding.ASCII.GetBytes($"{jwtSettings.ClientId}:{jwtSettings.ClientSecret}");
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
             });
+                
+            string Uri4P = Configuration.GetValue<string>("Uri4P");
             services.AddHttpClient("4P", client =>
             {
-                client.BaseAddress = new Uri("https://api.global-int-current.baikalplatform.com");
+                client.BaseAddress = new Uri(Uri4P);
             });
         }
 

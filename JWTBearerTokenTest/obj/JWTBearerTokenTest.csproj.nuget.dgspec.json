@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Codes\\VSStudio\\JwtBearerToken\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj": {}
+    "D:\\Codes\\VSStudio\\JwtBearerTokenTest\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj": {}
   },
   "projects": {
-    "D:\\Codes\\VSStudio\\JwtBearerToken\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj": {
+    "D:\\Codes\\VSStudio\\JwtBearerTokenTest\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Codes\\VSStudio\\JwtBearerToken\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj",
+        "projectUniqueName": "D:\\Codes\\VSStudio\\JwtBearerTokenTest\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj",
         "projectName": "JWTBearerTokenTest",
-        "projectPath": "D:\\Codes\\VSStudio\\JwtBearerToken\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj",
+        "projectPath": "D:\\Codes\\VSStudio\\JwtBearerTokenTest\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj",
         "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
-        "outputPath": "D:\\Codes\\VSStudio\\JwtBearerToken\\JWTBearerTokenTest\\obj\\",
+        "outputPath": "D:\\Codes\\VSStudio\\JwtBearerTokenTest\\JWTBearerTokenTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

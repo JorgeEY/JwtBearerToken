@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IprJrnV1IkvEfPvikTXd+XbnqXwtu5Z5rUeU4lq9UQ7kXEoiWYLT8/5KnvshQ6ZRnHyla/jfxiYN1Jah9iAW8g==",
+  "dgSpecHash": "JNS+Yqe0htw09TEX0i4Xsyhn4ZCdJKLSsmg8Wwa7J/t+PnU0FrkyVh7MZQN5UF8gMbMtxcTk9a8mCn2tqrdrOg==",
   "success": true,
-  "projectFilePath": "D:\\Codes\\VSStudio\\JwtBearerToken\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj",
+  "projectFilePath": "D:\\Codes\\VSStudio\\JwtBearerTokenTest\\JWTBearerTokenTest\\JWTBearerTokenTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jorge\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "C:\\Users\\Jorge\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
@@ -17,6 +17,7 @@
     "C:\\Users\\Jorge\\.nuget\\packages\\microsoft.identitymodel.logging\\6.15.1\\microsoft.identitymodel.logging.6.15.1.nupkg.sha512",
     "C:\\Users\\Jorge\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.15.1\\microsoft.identitymodel.tokens.6.15.1.nupkg.sha512",
     "C:\\Users\\Jorge\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\Jorge\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Jorge\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Jorge\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
     "C:\\Users\\Jorge\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.15.1\\system.identitymodel.tokens.jwt.6.15.1.nupkg.sha512",
